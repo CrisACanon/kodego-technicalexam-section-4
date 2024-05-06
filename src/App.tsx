@@ -47,24 +47,26 @@ function App() {
   };
 
   return (
-    <div className="board">
-      <div className="row">
-        {/* This part i cannot figure out why the onClick function is on error state. */}
-        <Game onClick={() => handleGameClick(0)} value={state[0]} />
-        <Game onClick={() => handleGameClick(1)} value={state[1]} />
-        <Game onClick={() => handleGameClick(2)} value={state[2]} />
+    <>
+      <div className="board">
+        <div className="row">
+          {/* This part i cannot figure out why the onClick function is on error state. */}
+          <Game onClick={() => handleGameClick(0)} value={state[0]} />
+          <Game onClick={() => handleGameClick(1)} value={state[1]} />
+          <Game onClick={() => handleGameClick(2)} value={state[2]} />
+        </div>
+        <div className="row">
+          <Game onClick={() => handleGameClick(3)} value={state[3]} />
+          <Game onClick={() => handleGameClick(4)} value={state[4]} />
+          <Game onClick={() => handleGameClick(5)} value={state[5]} />
+        </div>
+        <div className="row">
+          <Game onClick={() => handleGameClick(6)} value={state[6]} />
+          <Game onClick={() => handleGameClick(7)} value={state[7]} />
+          <Game onClick={() => handleGameClick(8)} value={state[8]} />
+        </div>
       </div>
-      <div className="row">
-        <Game onClick={() => handleGameClick(3)} value={state[3]} />
-        <Game onClick={() => handleGameClick(4)} value={state[4]} />
-        <Game onClick={() => handleGameClick(5)} value={state[5]} />
-      </div>
-      <div className="row">
-        <Game onClick={() => handleGameClick(6)} value={state[6]} />
-        <Game onClick={() => handleGameClick(7)} value={state[7]} />
-        <Game onClick={() => handleGameClick(8)} value={state[8]} />
-      </div>
-    </div>
+    </>
   );
 }
 

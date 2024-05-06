@@ -5,7 +5,7 @@ interface GameProps {
   onClick?: () => void;
 }
 
-const Game: React.FC = (props) => {
+const Game: React.FC<GameProps> = (props) => {
   return (
     <div onClick={props.onClick} className="block">
       {props.value}
